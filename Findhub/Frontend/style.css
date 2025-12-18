@@ -1,0 +1,186 @@
+/* RESET & VARIABLES */
+:root {
+
+    --primary-color: #3aaf9f; /* Background/Accent */
+    --secondary-color: rgb(2, 132, 89); /* Darker Text/Button */
+    --white: #ffffff;
+    --font-stack: 'Arial', sans-serif;
+    
+    /* UI Elements */
+    --border-radius: 10px;
+    --btn-radius: 25px;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--primary-color);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Center content and set max width */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. HEADER & NAVIGATION */
+header {
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex; /* Arrange logo and nav side-by-side */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: var(--btn-radius);
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/*  3. HERO SECTION  */
+.hero-section {
+    padding: 80px 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    color: var(--white);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto; /* Center content in the middle */
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* 4. INFO CARDS */
+.info-section {
+    padding: 60px 0 100px;
+}
+
+.cards-grid {
+    display: flex; /* Arrange cards side-by-side */
+    gap: 30px;
+}
+
+.info-card {
+    flex: 1;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%; /* Makes it a circle */
+    margin: 0 auto 20px;
+}
+
+.info-card h3 {
+    color: var(--secondary-color);
+    margin: 10px 0;
+    font-size: 1.4rem;
+}
+
+/* Primary Button Style */
+.btn-primary {
+    display: block; /* Make button fill its container */
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: var(--btn-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    
+}
+
+.btn-primary:hover {
+    background-color: #016f4c; /* Slightly darker green */
+}
+
+/*  5. FOOTER */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: var(--white);
+    font-size: 0.9rem;
+    border-bottom: #ffffff;
+    /* Removed border for simplicity */
+}
+
+
+/* 6. RESPONSIVENESS (Mobile) */
+@media (max-width: 768px) {
+    /* Stack header items vertically */
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* Stack nav links */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Stack cards vertically */
+    .cards-grid {
+        flex-direction: column; 
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+}

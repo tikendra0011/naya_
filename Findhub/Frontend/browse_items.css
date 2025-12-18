@@ -1,0 +1,284 @@
+
+        /* Search Page Specific Styles */
+        .search-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .search-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #3aaf9f;
+            border-radius: 25px;
+            font-size: 16px;
+        }
+        
+        .search-btn {
+            background: rgb(2, 132, 89);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .filter-options {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid #3aaf9f;
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn.active {
+            background: #3aaf9f;
+            color: white;
+        }
+        
+        .filter-btn:hover {
+            background: #3aaf9f;
+            color: white;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .stat-box {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: rgb(2, 132, 89);
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .item-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            position: relative;
+        }
+        
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .item-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #3aaf9f;
+        }
+        
+        .no-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #3aaf9f, rgb(2, 132, 89));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+        }
+        
+        .item-content {
+            padding: 20px;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .item-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+        
+        .item-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .badge-lost {
+            background: #ff6b6b;
+            color: white;
+        }
+        
+        .badge-found {
+            background: #4ecdc4;
+            color: white;
+        }
+        
+        .item-location {
+            color: #666;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .item-location:before {
+            content: "📍";
+        }
+        
+        .item-description {
+            color: #555;
+            line-height: 1.5;
+            margin: 15px 0;
+            max-height: 60px;
+            overflow: hidden;
+        }
+        
+        .item-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .item-date {
+            font-size: 0.8em;
+            color: #888;
+        }
+        
+        .item-reporter {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .claim-btn {
+            background: rgb(2, 132, 89);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .claim-btn:hover {
+            background: rgb(1, 110, 74);
+        }
+        
+        .claim-btn.disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .login-prompt {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: none;
+            text-align: center;
+        }
+        
+        .login-prompt h3 {
+            color: rgb(2, 132, 89);
+            margin-bottom: 15px;
+        }
+        
+        .login-prompt p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .login-prompt-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            display: none;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 50px;
+            background: white;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .no-results h3 {
+            color: rgb(2, 132, 89);
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .search-form {
+                flex-direction: column;
+            }
+            
+            .items-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-options {
+                justify-content: center;
+            }
+        }
